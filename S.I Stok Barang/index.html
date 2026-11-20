@@ -1,0 +1,886 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tersera - Coffee Shop Inventory</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="brand">
+            <div class="brand-icon">
+                <i class="fa-solid fa-mug-hot"></i>
+            </div>
+            <div>
+                <h2>Tersera</h2>
+                <span>Coffee Shop Inventory</span>
+            </div>
+        </div>
+
+        <div class="menu-label">MENU UTAMA</div>
+
+        <nav class="navigation">
+
+            <a href="#dashboard" class="nav-link active">
+                <i class="fa-solid fa-chart-pie"></i>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="#barang" class="nav-link">
+                <i class="fa-solid fa-boxes-stacked"></i>
+                <span>Data Stok Barang</span>
+            </a>
+
+            <a href="#kategori" class="nav-link">
+                <i class="fa-solid fa-layer-group"></i>
+                <span>Kategori Bahan</span>
+            </a>
+
+            <a href="#transaksi" class="nav-link">
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                <span>Barang Masuk & Keluar</span>
+            </a>
+
+            <a href="#supplier" class="nav-link">
+                <i class="fa-solid fa-truck"></i>
+                <span>Data Supplier</span>
+            </a>
+
+            <a href="#laporan" class="nav-link">
+                <i class="fa-solid fa-file-invoice"></i>
+                <span>Laporan Persediaan</span>
+            </a>
+
+        </nav>
+
+        <div class="menu-label second-label">LAINNYA</div>
+
+        <nav class="navigation">
+
+            <a href="#aktivitas" class="nav-link">
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                <span>Riwayat Aktivitas</span>
+            </a>
+
+            <a href="#pengaturan" class="nav-link">
+                <i class="fa-solid fa-gear"></i>
+                <span>Pengaturan</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <div class="help-card">
+                <div class="help-icon">
+                    <i class="fa-solid fa-circle-question"></i>
+                </div>
+
+                <h4>Butuh Bantuan?</h4>
+
+                <p>Hubungi administrator apabila mengalami kendala pada sistem.</p>
+
+                <a href="#bantuan">
+                    Pusat Bantuan
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="sidebar-user">
+                <div class="avatar">AD</div>
+
+                <div class="user-info">
+                    <h4>Admin Tersera</h4>
+                    <span>Administrator</span>
+                </div>
+
+                <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content" id="dashboard">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div class="breadcrumb">
+                <span>Halaman</span>
+                <i class="fa-solid fa-chevron-right"></i>
+                <strong>Dashboard</strong>
+            </div>
+
+            <div class="topbar-right">
+
+                <div class="date-display">
+                    <i class="fa-regular fa-calendar"></i>
+                    <span>20 November 2026</span>
+                </div>
+
+                <button class="notification">
+                    <i class="fa-regular fa-bell"></i>
+                    <span class="notification-dot"></span>
+                </button>
+
+                <div class="profile">
+                    <div class="avatar">AD</div>
+
+                    <div class="profile-info">
+                        <strong>Admin Tersera</strong>
+                        <span>Administrator</span>
+                    </div>
+
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- CONTENT -->
+        <div class="content-wrapper">
+
+            <!-- PAGE HEADING -->
+            <section class="page-heading">
+
+                <div>
+                    <span class="welcome">WELCOME TO TERSERA ☕</span>
+
+                    <h1>Dashboard Overview</h1>
+
+                    <p>
+                        Pantau persediaan bahan baku dan kebutuhan operasional coffee shop.
+                    </p>
+                </div>
+
+                <div class="heading-actions">
+
+                    <button class="btn-outline">
+                        <i class="fa-solid fa-download"></i>
+                        Export Laporan
+                    </button>
+
+                    <button class="btn-primary">
+                        <i class="fa-solid fa-plus"></i>
+                        Tambah Barang
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- STATISTICS -->
+            <section class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+                        <div class="stat-icon blue">
+                            <i class="fa-solid fa-boxes-stacked"></i>
+                        </div>
+
+                        <span class="stat-trend positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            8.5%
+                        </span>
+                    </div>
+
+                    <p>Total Jenis Barang</p>
+
+                    <h2>86</h2>
+
+                    <span class="stat-description">
+                        Seluruh bahan dan perlengkapan coffee shop
+                    </span>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+                        <div class="stat-icon green">
+                            <i class="fa-solid fa-warehouse"></i>
+                        </div>
+
+                        <span class="stat-trend positive">
+                            <i class="fa-solid fa-arrow-up"></i>
+                            12.3%
+                        </span>
+                    </div>
+
+                    <p>Total Persediaan</p>
+
+                    <h2>2.450</h2>
+
+                    <span class="stat-description">
+                        Akumulasi jumlah stok seluruh barang
+                    </span>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+                        <div class="stat-icon orange">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+
+                        <span class="stat-trend warning">
+                            Perlu perhatian
+                        </span>
+                    </div>
+
+                    <p>Stok Menipis</p>
+
+                    <h2>12</h2>
+
+                    <span class="stat-description">
+                        Bahan baku di bawah stok minimum
+                    </span>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <div class="stat-top">
+                        <div class="stat-icon red">
+                            <i class="fa-solid fa-circle-xmark"></i>
+                        </div>
+
+                        <span class="stat-trend danger">
+                            Segera restock
+                        </span>
+                    </div>
+
+                    <p>Stok Habis</p>
+
+                    <h2>4</h2>
+
+                    <span class="stat-description">
+                        Barang yang sudah tidak tersedia
+                    </span>
+
+                </div>
+
+            </section>
+
+
+            <!-- CHART -->
+            <section class="middle-grid">
+
+                <div class="panel chart-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Pergerakan Persediaan</h3>
+                            <p>Statistik bahan baku masuk dan keluar</p>
+                        </div>
+
+                        <select class="select-filter">
+                            <option>7 Hari Terakhir</option>
+                            <option>30 Hari Terakhir</option>
+                            <option>12 Bulan Terakhir</option>
+                        </select>
+                    </div>
+
+
+                    <div class="chart-legend">
+                        <span>
+                            <i class="legend-dot incoming"></i>
+                            Barang Masuk
+                        </span>
+
+                        <span>
+                            <i class="legend-dot outgoing"></i>
+                            Barang Keluar
+                        </span>
+                    </div>
+
+
+                    <div class="chart">
+
+                        <div class="chart-y">
+                            <span>500</span>
+                            <span>400</span>
+                            <span>300</span>
+                            <span>200</span>
+                            <span>100</span>
+                            <span>0</span>
+                        </div>
+
+                        <div class="chart-area">
+
+                            <div class="chart-grid">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <div class="bars">
+
+                                <div class="bar-group">
+                                    <div class="bar incoming-bar" style="height:75%"></div>
+                                    <div class="bar outgoing-bar" style="height:45%"></div>
+                                    <span>Sen</span>
+                                </div>
+
+                                <div class="bar-group">
+                                    <div class="bar incoming-bar" style="height:90%"></div>
+                                    <div class="bar outgoing-bar" style="height:55%"></div>
+                                    <span>Sel</span>
+                                </div>
+
+                                <div class="bar-group">
+                                    <div class="bar incoming-bar" style="height:65%"></div>
+                                    <div class="bar outgoing-bar" style="height:40%"></div>
+                                    <span>Rab</span>
+                                </div>
+
+                                <div class="bar-group">
+                                    <div class="bar incoming-bar" style="height:100%"></div>
+                                    <div class="bar outgoing-bar" style="height:65%"></div>
+                                    <span>Kam</span>
+                                </div>
+
+                                <div class="bar-group">
+                                    <div class="bar incoming-bar" style="height:70%"></div>
+                                    <div class="bar outgoing-bar" style="height:50%"></div>
+                                    <span>Jum</span>
+                                </div>
+
+                                <div class="bar-group">
+                                    <div class="bar incoming-bar" style="height:85%"></div>
+                                    <div class="bar outgoing-bar" style="height:60%"></div>
+                                    <span>Sab</span>
+                                </div>
+
+                                <div class="bar-group">
+                                    <div class="bar incoming-bar" style="height:60%"></div>
+                                    <div class="bar outgoing-bar" style="height:35%"></div>
+                                    <span>Min</span>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- STOCK STATUS -->
+                <div class="panel stock-panel">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Status Persediaan</h3>
+                            <p>Kondisi stok bahan baku saat ini</p>
+                        </div>
+
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+
+
+                    <div class="stock-summary">
+
+                        <div class="stock-circle">
+
+                            <div class="circle-inner">
+                                <strong>86</strong>
+                                <span>Total Barang</span>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="stock-legend">
+
+                        <div>
+                            <span class="legend-left">
+                                <i class="status-dot available"></i>
+                                Stok Aman
+                            </span>
+
+                            <strong>70</strong>
+                        </div>
+
+                        <div>
+                            <span class="legend-left">
+                                <i class="status-dot low"></i>
+                                Stok Menipis
+                            </span>
+
+                            <strong>12</strong>
+                        </div>
+
+                        <div>
+                            <span class="legend-left">
+                                <i class="status-dot empty"></i>
+                                Stok Habis
+                            </span>
+
+                            <strong>4</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- INVENTORY TABLE -->
+            <section class="panel inventory-panel" id="barang">
+
+                <div class="panel-heading inventory-heading">
+
+                    <div>
+                        <h3>Data Persediaan Bahan Baku</h3>
+                        <p>Informasi seluruh bahan dan perlengkapan coffee shop.</p>
+                    </div>
+
+                    <a href="#semua-barang" class="view-all">
+                        Lihat Semua
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div class="table-toolbar">
+
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Cari nama atau kode barang...">
+                    </div>
+
+                    <button class="filter-button">
+                        <i class="fa-solid fa-filter"></i>
+                        Filter
+                    </button>
+
+                </div>
+
+
+                <div class="table-responsive">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>NAMA BARANG</th>
+                                <th>KODE BARANG</th>
+                                <th>KATEGORI</th>
+                                <th>STOK</th>
+                                <th>MIN. STOK</th>
+                                <th>HARGA SATUAN</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <div class="product-info">
+                                        <div class="product-image laptop">
+                                            <i class="fa-solid fa-mug-hot"></i>
+                                        </div>
+
+                                        <div>
+                                            <strong>Biji Kopi Arabika</strong>
+                                            <span>Bahan Baku Kopi</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>BRG-001</td>
+                                <td>Biji Kopi</td>
+                                <td><strong>25 Kg</strong></td>
+                                <td>10 Kg</td>
+                                <td>Rp 150.000</td>
+                                <td><span class="status-badge safe">Tersedia</span></td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="product-info">
+                                        <div class="product-image mouse">
+                                            <i class="fa-solid fa-mug-saucer"></i>
+                                        </div>
+
+                                        <div>
+                                            <strong>Fresh Milk</strong>
+                                            <span>Bahan Minuman</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>BRG-002</td>
+                                <td>Susu</td>
+                                <td><strong>5 Liter</strong></td>
+                                <td>15 Liter</td>
+                                <td>Rp 22.000</td>
+                                <td><span class="status-badge low-stock">Stok Menipis</span></td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="product-info">
+                                        <div class="product-image keyboard">
+                                            <i class="fa-solid fa-cube"></i>
+                                        </div>
+
+                                        <div>
+                                            <strong>Gula Aren Cair</strong>
+                                            <span>Pemanis Minuman</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>BRG-003</td>
+                                <td>Pemanis</td>
+                                <td><strong>18 Botol</strong></td>
+                                <td>10 Botol</td>
+                                <td>Rp 35.000</td>
+                                <td><span class="status-badge safe">Tersedia</span></td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="product-info">
+                                        <div class="product-image monitor">
+                                            <i class="fa-solid fa-glass-water"></i>
+                                        </div>
+
+                                        <div>
+                                            <strong>Paper Cup 12 Oz</strong>
+                                            <span>Packaging</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>BRG-004</td>
+                                <td>Kemasan</td>
+                                <td><strong>0 Pcs</strong></td>
+                                <td>100 Pcs</td>
+                                <td>Rp 1.000</td>
+                                <td><span class="status-badge empty-stock">Stok Habis</span></td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="product-info">
+                                        <div class="product-image headset">
+                                            <i class="fa-solid fa-cookie-bite"></i>
+                                        </div>
+
+                                        <div>
+                                            <strong>Bubuk Cokelat</strong>
+                                            <span>Bahan Minuman</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>BRG-005</td>
+                                <td>Bubuk Minuman</td>
+                                <td><strong>12 Kg</strong></td>
+                                <td>5 Kg</td>
+                                <td>Rp 85.000</td>
+                                <td><span class="status-badge safe">Tersedia</span></td>
+                            </tr>
+
+
+                            <tr>
+                                <td>
+                                    <div class="product-info">
+                                        <div class="product-image laptop">
+                                            <i class="fa-solid fa-leaf"></i>
+                                        </div>
+
+                                        <div>
+                                            <strong>Bubuk Matcha</strong>
+                                            <span>Bahan Minuman</span>
+                                        </div>
+                                    </div>
+                                </td>
+
+                                <td>BRG-006</td>
+                                <td>Bubuk Minuman</td>
+                                <td><strong>3 Kg</strong></td>
+                                <td>8 Kg</td>
+                                <td>Rp 180.000</td>
+                                <td><span class="status-badge low-stock">Stok Menipis</span></td>
+                            </tr>
+
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+                <div class="table-footer">
+
+                    <span>Menampilkan 6 dari 86 barang</span>
+
+                    <div class="pagination">
+                        <button><i class="fa-solid fa-chevron-left"></i></button>
+                        <button class="page-active">1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button><i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- BOTTOM CONTENT -->
+            <section class="bottom-grid">
+
+                <!-- ACTIVITY -->
+                <div class="panel activity-panel" id="aktivitas">
+
+                    <div class="panel-heading">
+                        <div>
+                            <h3>Aktivitas Terbaru</h3>
+                            <p>Riwayat pengelolaan persediaan coffee shop</p>
+                        </div>
+
+                        <a href="#semua-aktivitas" class="view-all">
+                            Lihat Semua
+                        </a>
+                    </div>
+
+
+                    <div class="activity-list">
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon incoming-icon">
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </div>
+
+                            <div class="activity-detail">
+                                <strong>Barang Masuk</strong>
+                                <p>Biji Kopi Arabika - 10 Kg</p>
+                                <span>Oleh: Budi (Karyawan)</span>
+                            </div>
+
+                            <time>10:30</time>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon outgoing-icon">
+                                <i class="fa-solid fa-arrow-up"></i>
+                            </div>
+
+                            <div class="activity-detail">
+                                <strong>Barang Keluar</strong>
+                                <p>Fresh Milk - 5 Liter</p>
+                                <span>Oleh: Andi (Karyawan)</span>
+                            </div>
+
+                            <time>09:15</time>
+
+                        </div>
+
+
+                        <div class="activity-item">
+
+                            <div class="activity-icon update-icon">
+                                <i class="fa-solid fa-truck"></i>
+                            </div>
+
+                            <div class="activity-detail">
+                                <strong>Penerimaan Supplier</strong>
+                                <p>Gula Aren Cair - 20 Botol</p>
+                                <span>Supplier: Bali Coffee Supply</span>
+                            </div>
+
+                            <time>08:45</time>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RESTOCK -->
+                <div class="panel alert-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <h3>Peringatan Stok</h3>
+                            <p>Bahan baku yang harus segera dipesan</p>
+                        </div>
+
+                        <span class="alert-count">3 Item</span>
+
+                    </div>
+
+
+                    <div class="restock-item">
+                        <div>
+                            <strong>Fresh Milk</strong>
+                            <span>Stok tersisa: 5 Liter</span>
+                        </div>
+
+                        <span class="restock-status">Menipis</span>
+                    </div>
+
+
+                    <div class="restock-item">
+                        <div>
+                            <strong>Paper Cup 12 Oz</strong>
+                            <span>Stok tersisa: 0 Pcs</span>
+                        </div>
+
+                        <span class="restock-status">Habis</span>
+                    </div>
+
+
+                    <div class="restock-item">
+                        <div>
+                            <strong>Bubuk Matcha</strong>
+                            <span>Stok tersisa: 3 Kg</span>
+                        </div>
+
+                        <span class="restock-status">Menipis</span>
+                    </div>
+
+
+                    <button class="restock-button">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        Lihat Kebutuhan Pengadaan
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- SUPPLIER SECTION -->
+            <section class="panel inventory-panel" id="supplier">
+
+                <div class="panel-heading inventory-heading">
+                    <div>
+                        <h3>Informasi Supplier</h3>
+                        <p>Daftar pemasok bahan baku dan perlengkapan coffee shop.</p>
+                    </div>
+
+                    <a href="#semua-supplier" class="view-all">
+                        Lihat Semua
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+
+                <div class="table-responsive">
+
+                    <table>
+
+                        <thead>
+                            <tr>
+                                <th>NAMA SUPPLIER</th>
+                                <th>KONTAK</th>
+                                <th>PRODUK PASOKAN</th>
+                                <th>ALAMAT</th>
+                                <th>STATUS</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td><strong>Bali Coffee Supply</strong></td>
+                                <td>0812-3456-7890</td>
+                                <td>Biji Kopi Arabika</td>
+                                <td>Denpasar, Bali</td>
+                                <td><span class="status-badge safe">Aktif</span></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Fresh Dairy Bali</strong></td>
+                                <td>0813-4567-8901</td>
+                                <td>Susu dan Dairy</td>
+                                <td>Badung, Bali</td>
+                                <td><span class="status-badge safe">Aktif</span></td>
+                            </tr>
+
+                            <tr>
+                                <td><strong>Packaging Nusantara</strong></td>
+                                <td>0851-2345-6789</td>
+                                <td>Cup dan Kemasan</td>
+                                <td>Gianyar, Bali</td>
+                                <td><span class="status-badge safe">Aktif</span></td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- FOOTER -->
+            <footer class="footer">
+
+                <p>© 2026 BrewStock - Coffee Shop Inventory Management System</p>
+
+                <span>Version 1.0.0</span>
+
+            </footer>
+
+        </div>
+
+    </main>
+
+</div>
+
+</body>
+</html>
